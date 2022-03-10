@@ -26,6 +26,7 @@ after that import the atj_test.sql to your database
 |:-----|:--------|:----------| 
 | GET  | localhost/<yourfolder>/controller/read.php | Get list of all employee
 | GET  | localhost/<yourfolder>/controller/one_read.php | Get list a employee
+| POST  | localhost/<yourfolder>/controller/create.php | Create a new employee
 |---|---|---|
 
 <br>
