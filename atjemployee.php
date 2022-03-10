@@ -35,5 +35,22 @@ class AtjEmployee{
         $this->gaji = $dataRow['gaji'];
         $this->status = $dataRow['status'];
     }
+
+    // Create one Employee
+    public function createAtjEmployee(){
+        $this->nama=html_specialchars(strip_tags($this->nama));
+        $this->tgl_lahir=html_specialchars(strip_tags($this->tgl_lahir));
+        $this->gaji=html_specialchars(strip_tags($this->gaji));
+        $this->status=html_specialchars(strip_tags($this->status));
+        $sqlQuery = "INSERT INTO
+        ". $this->db_table ." SET nama = '".$this->nama."',
+        tgl_lahir = '".$this->tgl_lahir."',
+        gaji = '".$this->gaji."',status = '".$this->status."'";
+        $this->db->query($sqlQuery);
+        if($this->db->affected_rows > 0){
+            return true;
+        }
+        return false;
+    }
 }
 ?>
