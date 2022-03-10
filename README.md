@@ -24,7 +24,8 @@ after that import the atj_test.sql to your database
 
 | Method | Endpoint | Description
 |:-----|:--------|:----------| 
-| GET  | localhost/<yourfolder>/controller/read.php | Get list of all user 
+| GET  | localhost/<yourfolder>/controller/read.php | Get list of all employee
+| GET  | localhost/<yourfolder>/controller/one_read.php | Get list a employee
 |---|---|---|
 
 <br>
