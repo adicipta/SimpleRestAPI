@@ -28,6 +28,7 @@ after that import the atj_test.sql to your database
 | GET  | localhost/<yourfolder>/controller/one_read.php?id= | Get list a employee
 | POST  | localhost/<yourfolder>/controller/create.php | Create a new employee
 | PUT  | localhost/<yourfolder>/controller/update.php | Update employee
+| DELETE  | localhost/<yourfolder>/controller/delete.php?id= | Delete a employee
 |---|---|---|
 
 <br>
