@@ -72,5 +72,15 @@ class AtjEmployee{
         }
         return false;
     }
+
+    // Delete a employee
+    function deleteAtjEmployee(){
+        $sqlQuery = "DELETE FROM " . $this->db_table . " WHERE id = ".$this->id;
+        $this->db->query($sqlQuery);
+        if($this->db->affected_rows > 0){
+            return true;
+        }
+        return false;
+    }
 }
 ?>
