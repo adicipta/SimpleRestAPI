@@ -1,16 +1,17 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
+
 include '../database.php';
 include '../atjemployee.php';
-$database = new Database();
 
+$database = new Database();
 $db = $database->getConnection();
 $items = new AtjEmployee($db);
 $records = $items->getAtjEmployees();
 $itemCount = $records->num_rows;
 echo json_encode($itemCount);
-if($itemCount >0){
+if($itemCount > 0){
     $atjemployeArr = array();
     $atjemployeArr["body"] = array();
     $atjemployeArr["itemCount"] = $itemCount;

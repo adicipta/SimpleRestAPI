@@ -6,6 +6,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 include once '../database.php';
 include once '../atjemployee.php';
+
 $database = new Database();
 $db = $database->getConnection();
 $item = new AtjEmployee($db);
@@ -13,8 +14,8 @@ $item = new AtjEmployee($db);
 $item->id = isset($_GET['id']) ? $_GET['id'] : die();
 
 if($item->deleteAtjEmployee()){
-    echo json_encode("Success Delete Employee");
+    echo json_encode("Success delete Employee.");
 } else{
-    echo json_encode("Data could not be deleted");
+    echo json_encode("Data could not be deleted.");
 }
 ?>
