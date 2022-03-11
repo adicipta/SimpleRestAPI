@@ -52,5 +52,25 @@ class AtjEmployee{
         }
         return false;
     }
+
+    // Update a employee
+    public function updateAtjEmployee(){
+        $this->nama=htmlspecialchars(strip_tags($this->nama));
+        $this->tgl_lahir=htmlspecialchars(strip_tags($this->tgl_lahir));
+        $this->gaji=htmlspecialchars(strip_tags($this->gaji));
+        $this->status=htmlspecialchars(strip_tags($this->status));
+        $this->id=htmlspecialchars(strip_tags($this->id));
+
+        $sqlQuery = "UPDATE ". $this->db_table ."SET nama = '".$this->nama."',
+        tgl_lahir = '".$this->tgl_lahir."',
+        gaji = '".$this->gaji."',status = '".$this->status."'
+        WHERE id = ".$this->id;
+
+        $this->db->query($sqlQuery);
+        if($this->db->affected_rows > 0){
+            return true;
+        }
+        return false;
+    }
 }
 ?>
