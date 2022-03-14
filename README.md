@@ -16,7 +16,7 @@ $ git clone https://github.com/adicipta/SimpleRestAPI.git
 $ open xampp-control panel, start Apache and MySQL service
 
 ```
-after that import the atj_test.sql to your database
+import the atj_test.sql to your database
 
 ```
 
